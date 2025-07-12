@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.container {
+  width: 400px;
+  border: 1px solid dimgray;
+  margin: 10px auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+.cards {
+  text-decoration: none;
+  color: white;
+}
+.card-headings {
+  border-bottom: 1px solid dimgray;
+  padding: 16px 16px;
+  font-size: 18px;
+}
+h2 {
+  font-size: 28px;
+  margin: 5px;
+}
+.card-container {
+  width: 320px;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 20px 25px;
+  box-shadow: 0 0 1px dimgray;
+}
+.card-header-image {
+  height: 80px;
+  object-fit: cover;
+}
+.card-content > p {
+  color: dimgray;
+  font-size: 16px;
+  margin: 20px 0;
+}
+.bold-text {
+  font-weight: bold;
+  color: black;
+}
+.card1-image {
+  width: 100%;
+  object-fit: cover;
+}
+.card-inputs {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid #311b92;
+}
+.card-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: #311b92;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.form-controls {
+  margin-bottom: 10px;
+  position: relative;
+}
+.card5-inputs {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+  border: 1px solid gray;
+}
+.card5-inputs:focus-visible,
+.card5-inputs:focus,
+.card5-inputs:active {
+  border: 1px solid #311b92;
+  outline: 1px solid #311b92;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 255, 0.2);
+}
+.card5-form {
+  text-align: left;
+}
+.card5-label {
+  padding: 3px;
+  display: block;
+  margin-bottom: 4px; /* Adds space below label */
+  color: gray;
+  transition: color 0.2s;
+}
+.form-controls:focus-within .card5-label {
+  color: #311b92;
+}
+.card-rows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  padding: 12px;
+  margin: 10px auto;
+}
+.card-row-img {
+  height: 25px;
+}
+.card-mid-content {
+  position: absolute;
+  left: 55px;
+}
+.phone-footer-content {
+  color: dimgray;
+  font-size: 14px;
+  text-align: left;
+}
+.card-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 5px;
+  border: 1px solid #311b92;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.2);
+  margin: 10px auto;
+}
+.card-number-input {
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+}
+.card-number-input:focus-visible,
+.card-number-input:focus,
+.card-number-input:active {
+  border: none;
+  font-size: 14px;
+  outline: none;
+  box-shadow: none;
+}
+.card-number {
+  width: 70%;
+}
+.card-expCvc {
+  width: 30%;
+}
+.card-footer-content {
+  color: dimgray;
+  font-size: 16px;
+  padding: 5px 0;
+}
+.card-footer-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+.card-row-img-span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
