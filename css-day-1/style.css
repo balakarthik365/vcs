@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.headings {
+  color: green;
+  text-align: center;
+}
+/* 
+box-model:
+border => thickness, style and color of the border. we can also decide the border position like top,right,bottom, and left
+padding => space between the content and the border which is space inside the border
+margin => space between the content and the border which is space outside the border
+*/
+.box-heading {
+  color: green;
+  text-align: center;
+}
+.box-content {
+  padding: 10px;
+}
+.box-btn {
+  border-top: 1px solid dimgray;
+  padding: 20px 10px;
+}
+.box-a {
+  font-size: 16px;
+  text-decoration: none;
+}
+.box-model {
+  border: 1px solid dimgray;
+  border-radius: 10px;
+  width: 400px;
+  margin: 10px auto;
+}
+.box-img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.bg {
+  border-radius: 40px;
+  background-color: orange;
+  padding: 80px 80px;
+  margin: 50px auto;
+  width: 650px;
+  color: white;
+}
+.btn {
+  padding: 12px 40px;
+  border: none;
+  border-radius: 40px;
+}
+.center {
+  text-align: center;
+}
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  /* border: 1px solid dimgray; */
+}
+.login-img {
+  height: 90px;
+}
+.login-inputs {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid dimgray;
+  border-radius: 10px;
+  margin: 10px auto;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.login-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.container {
+  width: 600px;
+  margin: 25px auto;
+  /* padding: 10px; */
+  position: relative;
+}
+.article-container {
+  display: none;
+  border-bottom: 1px solid lightgray;
+}
+.article-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.article-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.article-footer {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: lightgray;
+  position: sticky;
+  bottom: 0;
+  display: none;
+}
+.container-image {
+  width: 100%;
+  border-radius: 14px;
+}
+/* z-index: the default value of 0 */
+.container-content {
+  position: absolute;
+  bottom: 100px;
+  left: 40px;
+  color: white;
+  z-index: 100;
+}
+.tint {
+  background-color: rgba(0, 0, 0, 0.303);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 14px;
+  position: absolute;
+  z-index: 0;
+}
+/* positions => to understand how elements are positioned in CSS.
+We have 5 positions in css: static, relative, absolute, fixed, and sticky.
+Static - is the default position, elements are positioned according to the normal flow of the document.
+Relative - elements are positioned relative to their normal position, you can use top, bottom, left, and right to adjust their position.
+Absolute - elements are positioned relative to their nearest positioned ancestor (an ancestor with a position other than
+static). If there is no such ancestor, they are positioned relative to the initial containing block (usually the viewport).
+Fixed - elements are positioned relative to the viewport, they stay in the same position even when the  page is scrolled.
+Sticky - elements are positioned based on the user's scroll position, they toggle between relative and fixed,
+top, bottom, left, and right values from that position and distance.    
+*/
+/* display
+block,inline,inline-block,flex,grid,none
+block - element takes up full width available. adds the new line. ex: div, p, h1, h2, h3, h4, h5, h6
+inline - element takes up only the width of its content. You cannot give height and width for inline elements ex: span, a, img.
+inline-block - element takes up only the width of its content, but you can give height and width for inline-block elements. ex: img
+*/
