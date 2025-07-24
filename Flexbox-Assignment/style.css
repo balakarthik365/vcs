@@ -53,8 +53,8 @@ body {
   align-items: center;
 }
 .user-logo {
-  padding: 5px;
-  border: 2px solid lightgray;
+  /* padding: 5px;
+  border: 2px solid lightgray; */
   border-radius: 100px;
   object-fit: cover;
 }
