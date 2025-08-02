@@ -70,7 +70,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 6%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -193,7 +193,7 @@ body {
   background-clip: padding-box;
 }
 .trending {
-  padding: 10px 135px;
+  padding: 10px 150px;
   margin: 10px auto;
 }
 .content-headings {
@@ -206,11 +206,13 @@ body {
 .toplist {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* flex-wrap: wrap; */
+  justify-content: flex-start;
   width: fit-content;
   gap: 55px;
   align-items: center;
+  z-index: -1;
+  overflow: hidden;
 }
 .card {
   border: 1px solid #ffffff10;
@@ -218,7 +220,22 @@ body {
   border-radius: 10px;
   position: relative;
   margin: 5px auto;
-  flex: 1;
+  animation-name: card-animation;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+.card::-webkit-scrollbar {
+  display: none;
+}
+@keyframes card-animation {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(10%);
+  }
 }
 .card:hover {
   cursor: pointer;
@@ -232,19 +249,18 @@ body {
 }
 .trending-list {
   position: absolute;
-  bottom: 22px;
+  bottom: 28px;
   font-size: 120px;
-  left: -40px;
+  left: -30px;
   font-weight: bold;
   color: black;
-  -webkit-text-stroke: 2px white; /* For Chrome, Edge, Safari */
+  -webkit-text-stroke: 2px white;
 }
 .more-reasons-to-join {
-  margin-top: 75px;
+  margin-top: 65px;
 }
 .top-reasons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   gap: 20px;
@@ -270,7 +286,7 @@ body {
   right: 40px;
 }
 .faqs {
-  margin-top: 75px;
+  margin-top: 65px;
   margin-bottom: 15px;
 }
 .faq-contents {
@@ -288,4 +304,198 @@ body {
   background-color: rgb(45, 45, 45);
   color: rgb(255, 255, 255);
   cursor: pointer;
+}
+.arrow > svg {
+  background: #f0ffffbd;
+  height: 16px;
+  padding: 56px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.content-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.ready-to-watch {
+  margin-top: 65px;
+  margin-bottom: 15px;
+}
+.ready-to-watch > p {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+.ready-to-watch > .subscribe > .sigin-input {
+  width: 35vw;
+}
+.footer {
+  margin-top: 65px;
+  margin-bottom: 15px;
+}
+.footer > p {
+  color: #ffffffdb;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #ffffffdb;
+}
+.footer > footer-list {
+  margin-top: 45px;
+}
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footchilds {
+  padding: 12px 0px;
+  display: inline-block;
+  position: relative;
+  left: 0;
+}
+@media (max-width: 500px) {
+  .logo {
+    width: 6.15rem;
+    position: relative;
+    top: 5px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    top: 5%;
+    left: 50%;
+    width: 89vw;
+  }
+  .en-btn {
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+  .hide-ss {
+    display: none;
+  }
+  .signin-btn {
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+  .content {
+    top: 35%;
+  }
+  .title {
+    font-size: 1.95rem;
+  }
+  .sub-title {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .description {
+    font-size: 17px;
+    margin: 1rem 0;
+  }
+  .sigin-input,
+  .get-started {
+    padding: 12px 14px;
+  }
+  .hero {
+    height: 65vh;
+  }
+  .tint {
+    height: 65vh;
+  }
+  .trending {
+    padding: 5px 25px;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+  .content-headings {
+    font-size: 1.2rem;
+  }
+  .card-img {
+    border-radius: 10px;
+    height: 156px;
+    object-fit: cover;
+    width: 112px;
+    object-position: center;
+  }
+  .trending-list {
+    font-size: 65px;
+    left: -15px;
+  }
+  .card {
+    margin: 0 auto;
+    animation-name: card-animation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  .card::-webkit-scrollbar {
+    display: none;
+  }
+  @keyframes card-animation {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-50%);
+    }
+  }
+  .toplist {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    gap: 15px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    width: 84%;
+  }
+  .content-list {
+    gap: 10px;
+  }
+  .more-reasons-to-join {
+    margin-top: 55px;
+  }
+  .top-reasons {
+    display: inline-block;
+  }
+  .reasons {
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    height: 175px;
+  }
+  .reason-logo {
+    position: absolute;
+    bottom: 25px;
+  }
+  .reason-content > p {
+    margin: 1px;
+  }
+  .reason-content > h2 {
+    margin: 4px 0px;
+  }
+  .faqs {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+  .faqs-accordian {
+    font-size: 16px;
+  }
+  .footer-list {
+    display: inline-block;
+  }
+  .subscribe {
+    display: inline-block;
+  }
+  .ready-to-watch > .subscribe > .sigin-input {
+    width: 80vw;
+  }
+  .ready-to-watch > .subscribe > .get-started {
+    /* width: 100vw; */
+    margin-top: 10px;
+  }
 }
