@@ -4,238 +4,68 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.container {
-  margin: 10px 25px;
-  font-size: 16px;
-  position: relative;
+:root {
+  --pageHeadings: 24px;
+  --headerText: #095609;
 }
-.navbar {
-  padding: 0.35em 0;
-  color: #0a4e1f;
+.container {
+  width: 90vw;
+  margin: 5px auto;
+}
+.header {
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  z-index: 1;
-  background-color: white;
-  margin-bottom: 0.5em;
 }
-.nav-menus {
+.brand-logo {
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 12px;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  font-size: 1.2em;
-  font-weight: bold;
+.brand-name {
+  color: var(--headerText);
 }
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 24px;
+  flex: 1;
 }
-.input-select {
-  padding-right: 0.35em;
-  color: #0a4e1f;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  font-weight: bold;
+.nav-items,
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--headerText);
+}
+.select-input {
+  font-weight: 600;
+  font-size: 14.8px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-.nav-btns,
-.bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-.hamberger {
-  display: none;
-}
-.login {
   border: none;
-  padding: 0.75em 1.5em;
-  border-radius: 0.85em;
-  color: #0a4e1f;
-  font-weight: bold;
+  padding-right: 6px;
+  outline: none;
+  color: var(--headerText);
+}
+.login-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: var(--headerText);
+  border: 1px solid var(--headerText);
   background-color: white;
-  border: 1px solid lightgrey;
+  font-weight: 600;
 }
-.create-account {
+.create-account-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  background-color: var(--headerText);
   border: none;
-  padding: 0.75em 1.5em;
-  border-radius: 0.85em;
-  color: white;
-  font-weight: bold;
-  background-color: #0a4e1f;
+  font-weight: 600;
 }
-.content {
-  background-color: #a3cda34a;
-  border-radius: 2em;
-  text-align: center;
-  padding: 1em 2em;
-  height: 90vh;
-}
-.updates {
-  margin-top: 2.75em;
-  color: #0a4e1f;
-  padding: 0.65em 1.5em;
-  display: inline-block;
-  background: #b6cdb6;
-  border-radius: 2em;
-  font-weight: bold;
-}
-.heading {
-  word-break: break-word;
-  margin: 0.5em;
-  font-size: 3em;
-}
-.description {
-  word-break: break-word;
-  margin: 0.5em;
-  font-size: 1.25em;
-}
-.information {
-}
-.content-video {
-  text-align: center;
-  position: relative;
-  position: absolute;
-  top: 380px;
-  left: 120px;
-}
-.content-img {
-  width: 80vmax;
-  height: 35vmax;
-  object-fit: cover;
-  border-radius: 3em;
-  text-align: center;
-}
-.video-details {
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  text-align: left;
-  color: white;
-}
-/* .updates {
-  margin-top: 2.75em;
-  color: #0a4e1f;
-  padding: 0.65em 1.5em;
-  display: inline-block;
-  background: #b6cdb6;
-  border-radius: 2em;
-  font-weight: bold;
-}
-.heading {
-  word-break: break-word;
-  margin: 0.5em;
-  font-size: 3em;
-}
-.description {
-  word-break: break-word;
-  margin: 0.5em;
-  font-size: 1.25em;
-}
-.content-video {
-  position: relative;
-}
-.video-details {
-  position: absolute;
-  bottom: 70px;
-  left: 125px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  text-align: left;
-}
-.video-name {
-  color: #ffffff;
-}
-.bottom-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.reference {
-  padding: 2em 17em;
-  background-color: #a3cda34a;
-  border-radius: 2em;
-}
-.ref-head {
-  font-size: 2em;
-}
-.userimage {
-  height: 6em;
-  width: 6em;
-  object-fit: cover;
-  border-radius: 20em;
-}
-.username {
-  font-size: 1em;
-  font-weight: bold;
-  margin: 0.3em;
-}
-.companies {
-  margin-top: 1em;
-} */
-/* @media (max-width: 500px) {
-  .container {
-    font-size: 12px;
-  }
-  .content {
-    height: 75vh;
-  }
-  .nav-list,
-  .nav-btns {
-    display: none;
-  }
-  .heading {
-    font-size: 2.5em;
-  }
-  .information {
-    padding: 0.5em;
-  }
-  .hamberger {
-    display: block;
-  }
-  .content-img {
-    height: 25em;
-    width: 32em;
-    object-fit: cover;
-    position: relative;
-    right: 32px;
-  }
-  .video-details {
-    position: absolute;
-    bottom: 45px;
-    left: 15px;
-    font-size: 1.25em;
-  }
-  .bottom {
-    display: inline-grid;
-  }
-  .create-account,
-  .login {
-    width: 100%;
-  }
-  .reference {
-    padding: 2em;
-    background-color: #a3cda34a;
-    border-radius: 2em;
-  }
-  .ref-head {
-    word-break: normal;
-    font-size: 1.75em;
-  }
-} */
