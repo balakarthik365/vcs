@@ -1,0 +1,74 @@
+JS - 
+JS is the client side programming laguague basically used for DOM manipulations. It can run only inside the browser initialy.
+
+ECMA script - 
+This is the community which have optimized the JS as initially JS was having so many bugs. Also added so many functionalities.
+ex: es5, es6
+
+JS code -> browser -> output
+----------JS-engine---------- This is actually responsible for compiling and giving us the output.every browser has the JS-engine.
+
+later, c++ combined with JS-engine and created the NODE JS.
+
+Node JS - 
+It is a runtime environment for the JS.
+
+we cannot pass the JS directly in the browser. So, we have to pass it with the HTML code to get the output.
+
+JS engines across the browsers.
+chrome and edge - has the v8 engine
+firefox - spider monkey
+
+
+console - it not a part of JS. but, gives us to log the details in the browser within the console.
+we have 3 types of console. console.log(), console.warn(), console.error().
+
+alert - just an alert box to show some messages.
+
+prompt - just an alert to take the input.
+
+We have bunch of concepts in the JS.
+
+variables - To store some values need a variables. the value is like a data that is stored in the memory.
+JS variables -> variable values stored in browser -> browser which has its own storage and runs in the RAM.
+So technically the variables are stored in the RAM which loads the browser which has its own memory that is called heap memory.
+to declare the variables we have the keywords - let and const. var depricated.
+let and const introduced in the es6. 
+semicolon in JS is optional. using this will be good practice anyhow.
+let email = "yash@gmail.com"
+now, 
+let - creates the container.
+email - createst the name for the container.
+values - is stored with the name of the container in the heap memory.
+
+let vs const
+let - values can be changed in the code.
+const - value cannot be changed in the code.
+
+datatypes - defines the type of data that is assiged as a value to the variable.
+strings, numbers, boolean, arrays and objects, undefined, notdeclared, null
+string - defined in '' or "".
+number - defined without '' or ""
+boolean - defines the value true or false
+undefined - if variable created and not have any value JS tells the value is undefined.
+not-declared - if a variable not declared and used somewhere JS throws the not-declared error.
+null - helps to make the variable value empty
+
+array and objects
+array - To store multiple values in the variable we use the array. array are declared with [].
+        ex: let items = ['milk', 'bread', 'paneer'];
+objects - they work similar to arrays but has the key, value pairs. objects are declared with {}
+          here we can store the values with more proper information.
+        ex: let user = {
+            name: 'Ranveer',
+            email: 'abc@gmail.com',
+            mobile: 8099099099,
+            age: 24,
+            isActive: true,
+            salary: 120000,
+        }
+
+primitive and reference data types in the JS =>
+reference data types - [arrays], {objects}, (functions) - references stored in stack, values stored in heap
+primitive data types - apart from the above all are the primitive - values stored in stack.
+
