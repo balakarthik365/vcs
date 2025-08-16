@@ -148,32 +148,39 @@ const movies = [
   },
 ];
 console.log(movies);
+//Perform the following tasks using the map(), filter(), and chaining methods:
 
+// a. Mapping:
+// - Create a new array containing only the titles of the movies.
 const titles = movies.map((movieTitle) => {
   return movieTitle.title;
 });
 console.log("Titles of the movies:", titles);
-
+// - Create a new array containing only the movie titles along with their IMDb ratings.
 const titlewithIMBD = movies.map((movie) => {
   return movie.title + " and " + movie.imdbRating;
 });
 console.log("Movie Titles and IMDB Ratings:", titlewithIMBD);
 
+// b. Filtering:
+// - Filter the movies to create an array of thriller movies released after the year 2000.
 const thrillers = movies.filter((movie) => {
   return movie.genre === "Thriller" && movie.year > 2000;
 });
 console.log("Thriller movies after 2000:", thrillers);
-
+// - Filter the movies to create an array of drama movies with IMDb ratings above 8.5.
 const drama = movies.filter((movie) => {
   return movie.genre === "Drama" && movie.imdbRating > 8.5;
 });
 console.log("drama movies with IMDB Ratings above 8.5%:", drama);
-
+// - Filter the movies to create an array of action movies starring Leonardo DiCaprio
 const leonardoActionMovies = movies.filter((movie) => {
   return movie.actors.includes("Leonardo DiCaprio") && movie.genre == "Action";
 });
 console.log("Action movies starring Leaonardo DiCaprio", leonardoActionMovies);
 
+// c. Chaining:
+// - Chain operations to find all drama movies featuring Christian Bale.
 const christianBaleMoviesDrama = movies
   .filter((movie) => {
     return movie.actors.includes("Christian Bale") && movie.genre === "Drama";
@@ -182,7 +189,7 @@ const christianBaleMoviesDrama = movies
     return movie.title;
   });
 console.log("Christian Bale movies in Drama genre:", christianBaleMoviesDrama);
-
+// - Chain operations to find all drama movies featuring Tim Robbins.
 const timRobbinsMoviesDrama = movies
   .filter((movie) => {
     return movie.actors.includes("Tim Robbins") && movie.genre === "Drama";
