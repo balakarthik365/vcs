@@ -4,7 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>array-map-and-filter</title>
-    <script src="movieAnalysis.js"></script>
+    <script src="movieAnalysis.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="show-data">
+        <table id="movies-table" class="table-bordered"></table>
+        <h2>a. Mapping</h2>
+        <div class="titleOfMovies">
+          <h4>=>Create a new array containing only the titles of the movies</h4>
+          <ol id="titleOfMovies"></ol>
+        </div>
+        <div class="titleOfMoviesWithImdb">
+          <h4>
+            =>Create a new array containing only the movie titles along with
+            their IMDb ratings.
+          </h4>
+          <table id="titleOfMoviesWithImdb" class="table-bordered"></table>
+        </div>
+        <h2>b. Filtering:</h2>
+        <div class="thrillerAfter2000">
+          <h4>
+            =>Filter the movies to create an array of thriller movies released
+            after the year 2000.
+          </h4>
+          <table id="thrillerAfter2000" class="table-bordered"></table>
+        </div>
+        <div class="dramaImdb">
+          <h4>
+            =>Filter the movies to create an array of drama movies with IMDb
+            ratings above 8.5.
+          </h4>
+          <table id="dramaImdb" class="table-bordered"></table>
+        </div>
+        <div class="actionLeo">
+          <h4>
+            =>Filter the movies to create an array of action movies starring
+            Leonardo DiCaprio.
+          </h4>
+          <p>No action movies staring Leonardo DiCaprio</p>
+        </div>
+        <div class="actionLeo">
+          <h4>
+            =>Filter the movies to create an array of action movies starring
+            Leonardo DiCaprio.
+          </h4>
+          <p>No action movies staring Leonardo DiCaprio</p>
+        </div>
+        <h2>c. Chaining:</h2>
+        <div class="dramaBale">
+          <h4>
+            =>Chain operations to find all drama movies featuring Christian
+            Bale.
+          </h4>
+          <p>No drama movies staring Christian Bale</p>
+        </div>
+        <div class="dramaTim">
+          <h4>
+            =>Chain operations to find all drama movies featuring Tim Robbins.
+          </h4>
+          <ol id="dramaTim"></ol>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

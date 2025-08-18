@@ -148,6 +148,35 @@ const movies = [
   },
 ];
 console.log(movies);
+// Assuming you have a <table id="movies-table"></table> in your HTML
+
+const table = document.getElementById("movies-table");
+
+// Create table header
+table.innerHTML = `
+<thead>
+  <tr class="t-head">
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>IMDb Rating</th>
+    <th>Actors</th>
+  </tr>
+</thead>
+`;
+
+// Iterate movies array and add rows
+movies.forEach((movie) => {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${movie.title}</td>
+    <td>${movie.genre}</td>
+    <td>${movie.year}</td>
+    <td>${movie.imdbRating}</td>
+    <td>${movie.actors.join(", ")}</td>
+  `;
+  table.appendChild(row);
+});
 //Perform the following tasks using the map(), filter(), and chaining methods:
 
 // a. Mapping:
@@ -155,10 +184,31 @@ console.log(movies);
 const titles = movies.map((movieTitle) => {
   return movieTitle.title;
 });
+const titleOfMovies = document.getElementById("titleOfMovies");
+titles.forEach((element) => {
+  const li = document.createElement("li");
+  li.innerHTML = element;
+  titleOfMovies.appendChild(li);
+});
 console.log("Titles of the movies:", titles);
 // - Create a new array containing only the movie titles along with their IMDb ratings.
 const titlewithIMBD = movies.map((movie) => {
   return movie.title + " and " + movie.imdbRating;
+});
+const titleOfMoviesWithImdb = document.getElementById("titleOfMoviesWithImdb");
+titleOfMoviesWithImdb.innerHTML = `
+<thead>
+  <tr class="t-head">
+    <th>Title</th> 
+    <th>IMDb Rating</th> 
+  </tr>
+</thead>
+`;
+movies.forEach((titleImdb) => {
+  const td = document.createElement("tr");
+  td.innerHTML = `<td>${titleImdb.title}</td>
+    <td>${titleImdb.imdbRating}</td>`;
+  titleOfMoviesWithImdb.appendChild(td);
 });
 console.log("Movie Titles and IMDB Ratings:", titlewithIMBD);
 
@@ -167,10 +217,56 @@ console.log("Movie Titles and IMDB Ratings:", titlewithIMBD);
 const thrillers = movies.filter((movie) => {
   return movie.genre === "Thriller" && movie.year > 2000;
 });
+const thrillerAfter2000 = document.getElementById("thrillerAfter2000");
+thrillerAfter2000.innerHTML = `
+<thead>
+  <tr class="t-head">
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>IMDb Rating</th>
+    <th>Actors</th>
+  </tr>
+</thead>
+`;
+thrillers.forEach((element) => {
+  const td = document.createElement("tr");
+  td.innerHTML = `
+  <td>${element.title}</td>
+    <td>${element.genre}</td>
+    <td>${element.year}</td>
+    <td>${element.imdbRating}</td>
+    <td>${element.actors.join(", ")}</td>
+    `;
+  thrillerAfter2000.appendChild(td);
+});
 console.log("Thriller movies after 2000:", thrillers);
 // - Filter the movies to create an array of drama movies with IMDb ratings above 8.5.
 const drama = movies.filter((movie) => {
   return movie.genre === "Drama" && movie.imdbRating > 8.5;
+});
+const dramaImdb = document.getElementById("dramaImdb");
+dramaImdb.innerHTML = `
+<thead>
+  <tr class="t-head">
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>IMDb Rating</th>
+    <th>Actors</th>
+  </tr>
+</thead>
+`;
+drama.forEach((element) => {
+  const td = document.createElement("tr");
+  td.innerHTML = `
+  <td>${element.title}</td>
+    <td>${element.genre}</td>
+    <td>${element.year}</td>
+    <td>${element.imdbRating}</td>
+    <td>${element.actors.join(", ")}</td>
+    `;
+  dramaImdb.appendChild(td);
 });
 console.log("drama movies with IMDB Ratings above 8.5%:", drama);
 // - Filter the movies to create an array of action movies starring Leonardo DiCaprio
@@ -197,4 +293,10 @@ const timRobbinsMoviesDrama = movies
   .map((movie) => {
     return movie.title;
   });
+const dramaTim = document.getElementById("dramaTim");
+timRobbinsMoviesDrama.forEach((element) => {
+  const dramaTimLi = document.createElement("li");
+  dramaTimLi.innerHTML = element;
+  dramaTim.appendChild(dramaTimLi);
+});
 console.log("Tim Robbins movies in Drama genre:", timRobbinsMoviesDrama);
