@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample JS</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="sm:w-1/4 w-[96%] mx-auto text-center mt-40 border border-neutral-300 rounded-lg"
+      >
+        <div class="flex items-center justify-between p-3">
+          <img
+            src="../assets/sample-JS/beach-island-svgrepo-com.svg"
+            alt=""
+            class="h-10 w-10"
+          />
+          <img
+            src="../assets/sample-JS/cable-car-cabin-svgrepo-com.svg"
+            alt=""
+            class="h-10 w-10"
+          />
+          <img
+            src="../assets/sample-JS/hotel-svgrepo-com.svg"
+            alt=""
+            class="h-10 w-10"
+          />
+          <img
+            src="../assets/sample-JS/summer-set-2-svgrepo-com.svg"
+            alt=""
+            class="h-10 w-10"
+          />
+          <img
+            src="../assets/sample-JS/worldwide-travel-svgrepo-com.svg"
+            alt=""
+            class="h-10 w-10"
+          />
+        </div>
+        <h1 class="bg-blue-500 font-semibold text-white text-xl p-3 mb-3">
+          Split your Expenses
+        </h1>
+        <div class="flex items-center gap-3 px-3 mb-3">
+          <input
+            type="text"
+            name=""
+            id="amount"
+            class="text-sm border border-neutral-200 w-1/2 p-2 rounded-lg focus:outline-blue-600 focus:ring-blue-500"
+            placeholder="Enter amount"
+          />
+          <input
+            type="text"
+            name=""
+            id="persons"
+            class="text-sm border border-neutral-200 w-1/2 p-2 rounded-lg focus:outline-blue-600 focus:ring-blue-500"
+            placeholder="Enter persons"
+          />
+        </div>
+        <div class="px-3 mb-3 font-semibold text-sm" id="showSplit"></div>
+        <div class="px-3 mb-3">
+          <button
+            id="calculate"
+            onclick="splitAndCalculate()"
+            class="w-full p-2 bg-green-500 text-white font-semibold rounded-lg hover:cursor-pointer hover:bg-green-700"
+          >
+            Calculate
+          </button>
+          <button
+            id="clear"
+            onclick="clearCalc()"
+            class="hidden w-full p-2 bg-orange-500 text-white font-semibold rounded-lg hover:cursor-pointer hover:bg-orange-700"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div
+        class="sm:w-1/4 w-[96%] mx-auto text-center mt-5 border border-neutral-300 rounded-lg"
+      >
+        <h1
+          class="bg-blue-500 font-semibold text-white text-xl p-3 mb-3 rounded-t-lg"
+        >
+          Counter Application
+        </h1>
+        <div class="flex items-center justify-evenly p-3 text-2xl font-bold">
+          <button class="hover:cursor-pointer" onclick="increment()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-plus-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"
+              />
+            </svg>
+          </button>
+          <div id="counterResult">0</div>
+          <button class="hover:cursor-pointer" onclick="decrement()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-dash-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="../JS/sample.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container box-border m-0 font-[system-ui]">
+      <div
+        class="mt-10 w-1/4 mx-auto border border-neutral-300 shadow-md shadow-neutral-200 rounded-lg"
+      >
+        <div
+          class="bg-blue-700 text-2xl text-center text-white rounded-t-lg p-2 font-bold"
+        >
+          BMI Calculator
+        </div>
+        <div class="p-5">
+          <div class="mb-5">
+            <div class="font-bold text-sm text-neutral-600">Gender</div>
+            <div class="flex items-center gap-2 my-3 text-sm">
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                class="w-5 h-5"
+              />
+              <label for="male">Male</label>
+            </div>
+            <div class="flex items-center gap-2 my-3 text-sm">
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                id="female"
+                class="w-5 h-5"
+              />
+              <label for="female">Female</label>
+            </div>
+          </div>
+          <div class="mb-5">
+            <div
+              class="font-bold text-sm text-neutral-600 flex items-center justify-between"
+            >
+              <p>Height</p>
+              <select
+                name="heightUnits"
+                id="heightUnits"
+                class="focus:outline-none text-neutral-800"
+                onchange="heightUnits()"
+              >
+                <option value="ft">Feets</option>
+                <option value="m">Meters</option>
+              </select>
+            </div>
+            <div class="flex items-center my-1 gap-2" id="feets">
+              <input
+                type="text"
+                name=""
+                id="ft"
+                placeholder="feet"
+                class="p-1 box-border w-1/2 focus:outline-none border-b border-b-neutral-300 focus:border-b-blue-300"
+              />
+              <input
+                type="text"
+                name=""
+                id="in"
+                placeholder="inches"
+                onblur="showHeightMsg()"
+                class="p-1 box-border w-1/2 focus:outline-none border-b border-b-neutral-300 focus:border-b-blue-300"
+              />
+            </div>
+            <div class="my-1" id="meters">
+              <input
+                type="text"
+                name=""
+                id="m"
+                placeholder="meters"
+                onblur="showHeightMsg()"
+                class="p-1 box-border w-full focus:outline-none border-b border-b-neutral-300 focus:border-b-blue-300"
+              />
+            </div>
+            <div class="my-1 text-sm hidden" id="showForFemale">
+              This height is very tall for women. It is more appropriate to use
+              the
+              <a
+                href="https://www.omnicalculator.com/health/ponderal-index"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span class="font-semibold text-blue-600 hover:text-blue-800">
+                  Ponderal Index</span
+                ></a
+              >.
+            </div>
+          </div>
+          <div class="mb-5">
+            <div
+              class="font-bold text-sm text-neutral-600 flex items-center justify-between"
+            >
+              <p>Weight</p>
+              <select
+                name="weightUnits"
+                id="weightUnits"
+                class="focus:outline-none text-neutral-800"
+                onchange="weightUnits()"
+              >
+                <option value="kgs">Kilograms</option>
+                <option value="pds">Pounds</option>
+              </select>
+            </div>
+            <div class="my-1" id="cm">
+              <input
+                type="text"
+                name=""
+                id="kgs"
+                placeholder="kilograms"
+                class="p-1 box-border w-full focus:outline-none border-b border-b-neutral-300 focus:border-b-blue-300"
+              />
+            </div>
+            <div class="my-1" id="m">
+              <input
+                type="text"
+                name=""
+                id="pds"
+                placeholder="pounds"
+                class="p-1 box-border w-full focus:outline-none border-b border-b-neutral-300 focus:border-b-blue-300"
+              />
+            </div>
+          </div>
+          <div class="mb-5">
+            <div class="font-bold text-sm text-neutral-600">
+              <p>BMI</p>
+              <div class="my-1" id="m">
+                <input
+                  type="text"
+                  name=""
+                  id="bmi"
+                  placeholder="--"
+                  readonly
+                  class="p-1 box-border w-full focus:outline-none border-b border-b-neutral-300 focus:border-b-blue-300"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mb-5">
+            <div class="font-bold text-sm text-neutral-600">
+              <p>BMI Prime</p>
+              <div class="my-1" id="m">
+                <input
+                  type="text"
+                  name=""
+                  id="bmiPrime"
+                  placeholder="--"
+                  readonly
+                  class="p-1 box-border w-full focus:outline-none border-b border-b-neutral-300 focus:border-b-blue-300"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="my-3">
+            <button
+              onclick="checkBMI()"
+              class="bg-blue-700 text-white px-4 py-2 rounded-lg w-full font-semibold hover:cursor-pointer hover:bg-blue-800 transform ease-in hover:shadow-md hover:shadow-blue-200"
+            >
+              Calculate BMI
+            </button>
+            <button
+              id="clearResults"
+              onclick="clearResults()"
+              class="bg-blue-700 text-white px-4 py-2 rounded-lg w-full font-semibold hover:cursor-pointer hover:bg-blue-800 transform ease-in hover:shadow-md hover:shadow-blue-200"
+            >
+              Clear results
+            </button>
+            <p class="text-sm my-3 font-semibold" id="bmiRange"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../JS/bmiCalculator.js"></script>
+  </body>
+</html>
