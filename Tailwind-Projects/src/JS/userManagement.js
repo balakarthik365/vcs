@@ -43,7 +43,7 @@ addUsers = () => {
   } else {
     showErrMsg.classList.remove("hidden");
     showErrMsg.innerHTML = "Please enter the user name and email to continue.";
-  }
+  }    
 };
 checkUsers = (email) => {
   let user = newArray.some((element) => {

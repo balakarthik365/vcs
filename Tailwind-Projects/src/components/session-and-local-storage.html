@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>session and local storage</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="w-[450px] mx-auto border border-neutral-200 shadow-2xl rounded-lg p-3 my-20"
+      >
+        <h4 class="text-xl text-black font-semibold">
+          Hey <span id="showUser"></span>, Welcome to the Frontend cohorts.
+        </h4>
+        <p class="text-neutral-600 text-sm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ea
+          incidunt cum?
+        </p>
+        <div class="text-center" id="showInputs">
+          <input
+            type="text"
+            name=""
+            id="userName"
+            placeholder="enter name"
+            class="input border border-neutral-200 w-full rounded-lg p-2 my-2 shadow-2xl shadow-neutral-100s"
+          />
+          <button
+            type="button"
+            id="inputBtn"
+            class="px-4 py-2 text-white bg-black text-md rounded-lg font-semibold cursor-pointer shadow-2xl shadow-neutral-100"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="w-[450px] mx-auto text-center border border-neutral-200 shadow-2xl rounded-lg p-5 my-20"
+      >
+        <div class="text-3xl font-bold mb-3" id="counterDiv">0</div>
+        <p class="text-sm mb-3">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </p>
+        <div class="flex items-center justify-evenly">
+          <button
+            id="increment"
+            class="p-3 text-white bg-black font-semibold text-sm rounded-lg hover:cursor-pointer"
+          >
+            Increment
+          </button>
+          <button
+            id="decrement"
+            class="p-3 text-white bg-black font-semibold text-sm rounded-lg hover:cursor-pointer"
+          >
+            Decrement
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/sessionAndLocalStorage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="w-[450px] p-3 my-30 mx-auto border border-neutral-200 rounded-lg shadow-lg shadow-neutral-400 text-center"
+      >
+        <div id="imgDiv" class="mb-2 mt-5">
+          <img
+            class="rounded-full h-[145px] w-[145px] mx-auto border border-neutral-400 shadow-lg shadow-neutral-400"
+            id="userImg"
+            alt="User Icon"
+          />
+        </div>
+        <div id="userName" class="text-xl mb-2 font-bold text-black"></div>
+        <table class="w-[70%] mx-auto mb-3">
+          <tbody>
+            <tr>
+              <td class="w-[40%] text-left">
+                <span class="text-sm font-semibold">Email: </span>
+              </td>
+              <td class="w-[60%] text-left">
+                <span id="emailId" class="text-sm text-neutral-700"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-[40%] text-left">
+                <span class="text-sm font-semibold">Location: </span>
+              </td>
+              <td class="w-[60%] text-left">
+                <span id="location" class="text-sm text-neutral-700"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-[40%] text-left">
+                <span class="text-sm font-semibold">Phone: </span>
+              </td>
+              <td class="w-[60%] text-left">
+                <span id="phone" class="text-sm text-neutral-700"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button
+          type="button"
+          onclick="fetchRandomUsers()"
+          class="text-white bg-black hover:cursor-pointer px-4 py-3 rounded-lg font-bold shadow-xl shadow-neutral-400"
+        >
+          Fetch Random Users
+        </button>
+      </div>
+    </div>
+    <script src="../js/asynchronous-apis.js"></script>
+  </body>
+</html>
