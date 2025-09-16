@@ -1,0 +1,33 @@
+Architecture of Node JS - 
+client(user) -> request -> Node JS server -------> event queue
+whatever the requests is raised by the clients/users the node js adds it to the event queue. now, event loop will check/watch then pickup  the requests in the event queue and work on the requests in FIFO order.
+
+The requests can be blocking operation and non blocking operations.
+
+when event loop picks an request from event queue first it check the type of request if it is blocking or non-blocking request. where blocking is sync and non blocking is async.
+
+if non-blocking then the response is send to user.
+
+if blocking then the request goes to thread pool. (Thread is a worker who works with blocking operation). If any thread is available then thread works on the request and send the response to the user.
+
+by default it has 4 threads(can be increased based on your machine CPU cores) if the blocking request exceeds more than 4 then the request should be waiting untill one of four threads are completed previous execution and ready to take the new request then the request get proccessed and the response is sent back.
+
+Major difference for blocking and non blocking request is when you add a code using the blocking request then the lines of code are read line by line and now until the thread picks this request and completes the execution it never goes to next line. but non blocking will never stop as blocking.
+
+
+http server - 
+In node JS we can create the http servers by importing http in require and do operations.
+Ex: 
+const http = require('http'); //http is the built in module that helps to create http server
+const myServer = http.createServer((req, res)={
+console.log("new req received");
+res.end("Hello from server);
+});
+myServer.listen(8000,()=>console.log("server started"));
+// createServer will create the web server and run a call back function when ever it gets an incoming request
+// it gets all details of user like ip and all
+//res - send the response. reponse can be any thing like html, image or string
+
+
+
+
